@@ -9,8 +9,8 @@ jobs:
         with:
           server_address: smtp.gmail.com
           server_port: 587
-          username: $ {{ secrets.MAIL_USERNAME }}
-          password: $ {{ secrets.MAIL_PASSWORD }}
+          username: ${{ secrets.MAIL_USERNAME }}
+          password: ${{ secrets.MAIL_PASSWORD }}
           subject: 'ALERT, WE HAVE DETECTED SMTH in YOUR REPO ${{ github.repository }}'
           body: 
             Hello user,
