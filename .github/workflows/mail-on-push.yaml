@@ -11,14 +11,14 @@ jobs:
           server_port: 587
           username: ${{ secrets.MAIL_USERNAME }}
           password: ${{ secrets.MAIL_PASSWORD }}
-          subject: 'ALERT, WE HAVE DETECTED SMTH in YOUR REPO ${{ github.repository }}'
+          subject: 'ALERT, we have detected a commit in ${{ github.repository }}'
           body: 
             Hello user,
 
-            A commit has been detected in your area.
+            A commit has been detected!
 
             Commit created by ${{ github.event.pusher.name }}
 
 
-          to: "jegorka2002@gmail.com"
+          to: "juri.vaitmaa@tthk.ee"
           from: "Github actions for ${{github.repository}}"
